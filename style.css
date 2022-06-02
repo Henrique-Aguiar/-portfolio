@@ -28,6 +28,50 @@ p {
     letter-spacing: 0.05rem;
 }
 
+/* Seção de navegação */
+#navigation{
+    display: flex;
+    font-size: 2.5rem;
+    height: 72px;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+    background-color:rgb(17, 15, 21);
+    color: white;
+    border-bottom: 3px solid hsl(51, 100%, 30%);
+
+}
+div.menu {
+    display: flex;
+    width: 100%;
+    padding: 25px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+div .logo{
+    color: gold;
+    font-size: 3rem;
+}
+.menu ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu a{
+    color: white;
+    padding: 10px 20px;
+}
+
+.menu a:hover{
+    color: gold;
+    border: 1px solid gold;
+    letter-spacing: .1rem;
+    transition: .5s ease;
+    transition-property: border, color;
+}
+
 .container{
     min-height: 100vh;
     width: 100%;
@@ -49,6 +93,9 @@ p {
 
 
 /* Seção de apresentação */
+li {
+    list-style: none;
+}
 
 #presentation{
     background-image: url(./imgs/background.jpeg);
@@ -126,17 +173,21 @@ p {
     z-index: -1;
 }
 
+
+
 /* Seção de Portifólio */
 
 #portfolio .portfolio{
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
+    /* padding: 100px 0; */
+}
+
+#portfolio .portfolio .header h1{
     padding: 100px 0;
 }
-#portfolio .portfolio-header h1{
-    margin-bottom: 50px;
-}
+
 #portfolio .all-projects {
     display: flex;
     align-items: center;
@@ -201,6 +252,66 @@ p {
     transform: scale(1.1);
 }
 
+/* Seção de cabeçalho */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    /* background: linear-gradient(60deg, #a2a0a7 0%, #373a3c 100%); */
+    background-color:rgb(17, 15, 21);
+}
+
+#contact h1{
+    font-size: 3rem;
+    padding: 40px 0 50px;
+    color: gold;
+    text-transform: uppercase;
+}
+.contact {
+    background-color: #34af23;
+    margin-bottom: 25px;
+    font-weight: 700;
+    border-radius: 4rem;
+}
+
+.contact a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 1.6rem 3.2rem;
+    width: 250px;
+    color: white;
+    font-size: 2rem;
+}
+
+.contact:hover{
+    filter: brightness(1.3);
+}
+
+.whatsapp {
+    background-color: #34af23;
+}
+
+.linkedin{
+    background-color: #0e76a8;
+}
+
+.github{
+    background-color: black;
+}
+
+.email{
+    background-color: #4285f4;
+}
+
+a svg {
+    height: 20px;
+    width: 20px;
+    margin-right: 18px;
+    color: white;
+}
+
 /* Keyframes */
 
 @keyframes text_reveal{
@@ -244,6 +355,9 @@ p {
     #portfolio .project-item:nth-child(even) {
         flex-direction: row-reverse;
     }
-
-
 }
+ @media (max-width: 767px) {
+     #navigation .logo{
+         display: none;
+     }
+ }
